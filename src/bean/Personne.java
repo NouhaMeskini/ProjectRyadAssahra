@@ -107,7 +107,7 @@ public class Personne {
 
     @Override
     public String toString() {
-        return "Client{" + "id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", telephone=" + telephone + ", adresse=" + adresse + ", ville=" + ville + '}';
+        return "Personne{" + "id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", telephone=" + telephone + ", adresse=" + adresse + ", ville=" + ville + '}';
     }
 
     
