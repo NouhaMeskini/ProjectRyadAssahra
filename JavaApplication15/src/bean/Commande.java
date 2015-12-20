@@ -16,6 +16,8 @@ public class Commande {
   private String id;
   private List<Produit> produits ; 
   private Client client;
+  private boolean annulée;
+  
 
     public Commande() {
     }
@@ -49,6 +51,15 @@ public class Commande {
         this.produits = produits;
     }
 
+    public boolean isAnnulée() {
+        return annulée;
+    }
+
+    public void setAnnulée(boolean annulée) {
+        this.annulée = annulée;
+    }
+    
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -73,8 +84,10 @@ public class Commande {
 
     @Override
     public String toString() {
-        return "Commande{" + "id=" + id + '}';
+        return "Commande{" + "id=" + id + ", annul\u00e9e=" + annulée + '}';
     }
+
+   
     
     
   

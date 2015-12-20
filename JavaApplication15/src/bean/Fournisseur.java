@@ -5,6 +5,7 @@
  */
 package bean;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,11 +14,13 @@ import java.util.List;
  */
 public class Fournisseur extends Personne {
     private List<Produit> produits;
+    private Date dateEmbauche;
+    private double salaire;
 
     public Fournisseur() {
     }
 
-    public Fournisseur(List<Produit> produits, String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
+    public Fournisseur(List<Produit> produits, Date dateEmbauche, double salaire, String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
         super(prenom, nom, telephone, adresse, sex, email, ville);
         this.produits = produits;
     }
@@ -30,10 +33,31 @@ public class Fournisseur extends Personne {
         this.produits = produits;
     }
 
+    public Date getDateEmbauche() {
+        return dateEmbauche;
+    }
+
+    public void setDateEmbauche(Date dateEmbauche) {
+        this.dateEmbauche = dateEmbauche;
+    }
+
+    public double getSalaire() {
+        return salaire;
+    }
+
+    public void setSalaire(double salaire) {
+        this.salaire = salaire;
+    }
+
     @Override
     public String toString() {
-        return super.toString() + "produits=" + produits + '}';
+        return "Fournisseur{" + "produits=" + produits + ", dateEmbauche=" + dateEmbauche + ", salaire=" + salaire + '}';
     }
+    
+
+   
+
+    
     
     
     
