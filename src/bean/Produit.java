@@ -5,6 +5,7 @@
  */
 package bean;
 
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -14,6 +15,7 @@ import java.util.Objects;
 public class Produit {
     private String id;
     private String references;
+    private Date dateArrivee;
     private String libelle;
     private SousCategorie sousCategorie;
     private Fournisseur fournisseur;
@@ -25,11 +27,15 @@ public class Produit {
         this.id = id;
     }
 
-    public Produit(String id, String references, String libelle) {
-        this.id = id;
+    public Produit(String references, Date dateArrivee, String libelle, SousCategorie sousCategorie, Fournisseur fournisseur) {
         this.references = references;
+        this.dateArrivee = dateArrivee;
         this.libelle = libelle;
+        this.sousCategorie = sousCategorie;
+        this.fournisseur = fournisseur;
     }
+
+   
 
     public String getId() {
         return id;
@@ -71,6 +77,15 @@ public class Produit {
         this.fournisseur = fournisseur;
     }
 
+    public Date getDateArrivee() {
+        return dateArrivee;
+    }
+
+    public void setDateArrivee(Date dateArrivee) {
+        this.dateArrivee = dateArrivee;
+    }
+    
+
     @Override
     public int hashCode() {
         int hash = 5;
@@ -95,8 +110,10 @@ public class Produit {
 
     @Override
     public String toString() {
-        return "Produit{" + "id=" + id + ", references=" + references + ", libelle=" + libelle + '}';
+        return "Produit{" + "id=" + id + ", references=" + references + ", dateArrivee=" + dateArrivee + ", libelle=" + libelle + '}';
     }
+
+    
     
     
     
