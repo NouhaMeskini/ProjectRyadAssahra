@@ -17,8 +17,10 @@ public class Client extends Personne {
     public Client() {
     }
 
-    public Client(List<Commande> commandes, String id, String prenom, String nom, String telephone, String adresse, String ville) {
-        super(id, prenom, nom, telephone, adresse, ville);
+   
+    
+    public Client(List<Commande> commandes, String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
+        super(prenom, nom, telephone, adresse, sex, email, ville);
         this.commandes = commandes;
     }
 

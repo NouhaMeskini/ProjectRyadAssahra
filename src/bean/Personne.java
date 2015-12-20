@@ -18,11 +18,34 @@ public class Personne {
     protected String nom;
     protected String telephone;
     protected String adresse;
+    private String sex;
+    private String email;
     protected String ville;
 
     public Personne() {
     }
 
+    public Personne(String id) {
+        this.id = id;
+    }
+
+    
+    
+    public Personne(String prenom, String nom, String telephone, String adresse, String sex, String email, String ville) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.telephone = telephone;
+        this.adresse = adresse;
+        this.sex = sex;
+        this.email = email;
+        this.ville = ville;
+    }
+     
+    
+    
+    
+    
+    
     public String getId() {
         return id;
     }
@@ -31,16 +54,16 @@ public class Personne {
         this.id = id;
     }
 
-    public Personne(String id, String prenom, String nom, String telephone, String adresse, String ville) {
-        this.id = id;
-        this.prenom = prenom;
-        this.nom = nom;
-        this.telephone = telephone;
-        this.adresse = adresse;
-        this.ville = ville;
+    public String getSex() {
+        return sex;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
     
-    
+
 
     public String getPrenom() {
         return prenom;
@@ -82,6 +105,17 @@ public class Personne {
         this.ville = ville;
     }
 
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    
+    
+
     
     @Override
     public int hashCode() {
@@ -107,9 +141,12 @@ public class Personne {
 
     @Override
     public String toString() {
-        return "Personne{" + "id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", telephone=" + telephone + ", adresse=" + adresse + ", ville=" + ville + '}';
+        return "Personne{" + "id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", telephone=" + telephone + ", adresse=" + adresse + ", sex=" + sex + ", email=" + email + ", ville=" + ville + '}';
     }
 
+    
+
+    
     
 
     

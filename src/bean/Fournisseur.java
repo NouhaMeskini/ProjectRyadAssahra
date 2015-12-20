@@ -17,8 +17,8 @@ public class Fournisseur extends Personne {
     public Fournisseur() {
     }
 
-    public Fournisseur(List<Produit> produits, String id, String prenom, String nom, String telephone, String adresse, String ville) {
-        super(id, prenom, nom, telephone, adresse, ville);
+    public Fournisseur(List<Produit> produits, String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
+        super(prenom, nom, telephone, adresse, sex, email, ville);
         this.produits = produits;
     }
 
