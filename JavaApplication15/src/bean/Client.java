@@ -12,16 +12,15 @@ import java.util.List;
  * @author M
  */
 public class Client extends Personne {
-   private List<Commande> commandes;
-    private Paiement paiement ;
-    private Compte compte ;
+    private List<Commande> commandes;
+   
 
     public Client() {
     }
 
    
     
-    public Client(List<Commande> commandes,Paiement paiement, Compte compte, String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
+    public Client(String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
         super(prenom, nom, telephone, adresse, sex, email, ville);
         this.commandes = commandes;
     }
