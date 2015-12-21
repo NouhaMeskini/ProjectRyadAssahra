@@ -18,7 +18,7 @@ public class Personne {
     protected String nom;
     protected String telephone;
     protected String adresse;
-    private String sex;
+    private String sexe;
     private String email;
     protected String ville;
 
@@ -31,12 +31,12 @@ public class Personne {
 
     
     
-    public Personne(String prenom, String nom, String telephone, String adresse, String sex, String email, String ville) {
+    public Personne(String prenom, String nom, String telephone, String adresse, String sexe, String email, String ville) {
         this.prenom = prenom;
         this.nom = nom;
         this.telephone = telephone;
         this.adresse = adresse;
-        this.sex = sex;
+        this.sexe = sexe;
         this.email = email;
         this.ville = ville;
     }
@@ -55,7 +55,7 @@ public class Personne {
     }
 
     public String getSex() {
-        return sex;
+        return sexe;
     }
 
     public String getEmail() {
@@ -106,7 +106,7 @@ public class Personne {
     }
 
     public void setSex(String sex) {
-        this.sex = sex;
+        this.sexe = sexe;
     }
 
     public void setEmail(String email) {
@@ -141,7 +141,7 @@ public class Personne {
 
     @Override
     public String toString() {
-        return "Personne{" + "id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", telephone=" + telephone + ", adresse=" + adresse + ", sex=" + sex + ", email=" + email + ", ville=" + ville + '}';
+        return "Personne{" + "id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", telephone=" + telephone + ", adresse=" + adresse + ", sexe=" + sexe + ", email=" + email + ", ville=" + ville + '}';
     }
 
     
