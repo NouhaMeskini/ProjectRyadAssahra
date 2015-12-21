@@ -24,7 +24,7 @@ public class Categorie {
         this.id = id;
     }
 
-    public Categorie(String id, String libelle) {
+    public Categorie(String id, String nom) {
         this.id = id;
         this.nom = nom;
     }

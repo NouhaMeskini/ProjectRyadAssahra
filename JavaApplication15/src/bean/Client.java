@@ -20,9 +20,9 @@ public class Client extends Personne {
 
    
     
-    public Client(String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
-        super(prenom, nom, telephone, adresse, sex, email, ville);
-        this.commandes = commandes;
+    public Client(String id, String prenom, String nom, String telephone, String adresse, String ville,String sexe,String email) {
+        super(prenom, nom, telephone, adresse, sexe, email, ville);
+      
     }
 
     
@@ -37,8 +37,10 @@ public class Client extends Personne {
 
     @Override
     public String toString() {
-        return  super.toString() +  "commandes=" + commandes + '}';
+        return super.toString();
     }
+
+    
     
     
    

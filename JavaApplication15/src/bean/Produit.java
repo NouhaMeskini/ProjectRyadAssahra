@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class Produit {
     private String id;
-    private String references;
+    private String reference;
     private Date dateArrivee;
     private String libelle;
     private SousCategorie sousCategorie;
@@ -27,8 +27,8 @@ public class Produit {
         this.id = id;
     }
 
-    public Produit(String references, Date dateArrivee, String libelle, SousCategorie sousCategorie, Fournisseur fournisseur) {
-        this.references = references;
+    public Produit(String references, Date dateArrivee, String libelle) {
+        this.reference = reference;
         this.dateArrivee = dateArrivee;
         this.libelle = libelle;
         this.sousCategorie = sousCategorie;
@@ -45,12 +45,12 @@ public class Produit {
         this.id = id;
     }
 
-    public String getReferences() {
-        return references;
+    public String getReference() {
+        return reference;
     }
 
-    public void setReferences(String references) {
-        this.references = references;
+    public void setReferences(String reference) {
+        this.reference = reference;
     }
 
     public String getLibelle() {
@@ -110,7 +110,7 @@ public class Produit {
 
     @Override
     public String toString() {
-        return "Produit{" + "id=" + id + ", references=" + references + ", dateArrivee=" + dateArrivee + ", libelle=" + libelle + '}';
+        return "Produit{" + "id=" + id + ", references=" + reference + ", dateArrivee=" + dateArrivee + ", libelle=" + libelle + '}';
     }
 
     

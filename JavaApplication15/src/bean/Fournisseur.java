@@ -19,9 +19,9 @@ public class Fournisseur extends Personne {
     public Fournisseur() {
     }
 
-    public Fournisseur(List<Produit> produits, Date dateEmbauche, String id, String prenom, String nom, String telephone, String adresse, String ville,String sex,String email) {
-        super(prenom, nom, telephone, adresse, sex, email, ville);
-        this.produits = produits;
+    public Fournisseur( Date dateEmbauche, String id, String prenom, String nom, String telephone, String adresse, String ville,String sexe,String email) {
+        super(prenom, nom, telephone, adresse, sexe, email, ville);
+        
     }
 
     public List<Produit> getProduits() {
@@ -40,12 +40,14 @@ public class Fournisseur extends Personne {
         this.dateEmbauche = dateEmbauche;
     }
 
-    
-
     @Override
     public String toString() {
-        return "Fournisseur{" + "produits=" + produits + ", dateEmbauche=" + dateEmbauche +  '}';
+        return "Fournisseur{" + "dateEmbauche=" + dateEmbauche + '}';
     }
+
+    
+
+    
     
 
    
