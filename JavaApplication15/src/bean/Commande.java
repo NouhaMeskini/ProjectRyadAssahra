@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class Commande {
   private String id;
-  private List<Produit> produits ; 
+  private List<CommandeItem> commandeItems ; 
   private Client client;
   private boolean annulée;
   
@@ -43,13 +43,15 @@ public class Commande {
         this.id = id;
     }
 
-    public List<Produit> getProduits() {
-        return produits;
+    public List<CommandeItem> getCommandeItems() {
+        return commandeItems;
     }
 
-    public void setProduits(List<Produit> produits) {
-        this.produits = produits;
+    public void setCommandeItems(List<CommandeItem> commandeItems) {
+        this.commandeItems = commandeItems;
     }
+
+   
 
     public boolean isAnnulée() {
         return annulée;
