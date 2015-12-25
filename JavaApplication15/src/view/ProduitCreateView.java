@@ -13,7 +13,9 @@ import dao.ProduitDao;
 import java.time.Instant;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import service.FournisseurService;
 import service.ProduitService;
+import service.SousCategorieService;
 
 /**
  *
@@ -22,6 +24,9 @@ import service.ProduitService;
 public class ProduitCreateView extends javax.swing.JFrame {
     
     ProduitService produitService= new ProduitService();
+    FournisseurService fournisseurService = new FournisseurService();
+    SousCategorieService sousCategorieService= new SousCategorieService();
+    
 
     /**
      * Creates new form ProduitCreateView
@@ -29,6 +34,20 @@ public class ProduitCreateView extends javax.swing.JFrame {
     public ProduitCreateView() {
         initComponents();
     }
+    
+        private void initView() {
+          intiComboBox1();
+        
+    }
+       
+        private void intiComboBox1() {
+        jComboBox2.removeAllItems();
+        jComboBox2.addItem("--SELECT--");
+        
+          jComboBox3.removeAllItems();
+        jComboBox3.addItem("--SELECT--");
+    }
+       
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -171,9 +190,9 @@ public class ProduitCreateView extends javax.swing.JFrame {
         produit.setReference(jTextField1.getText());
         produit.setDateArrivee(jTextField5.getText());
         produit.setLibelle(jTextField3.getText());
-        produit.setSousCategorie((SousCategorie) jComboBox2.getSelectedItem());
-        produit.setFournisseur((Fournisseur) jComboBox3.getSelectedItem());
-          
+        produit.getSousCategorie().setId(jComboBox2.getSelectedItem()+"");
+        produit.getFournisseur().setId(jComboBox3.getSelectedItem()+"");
+       
         return produit;
         
     }
