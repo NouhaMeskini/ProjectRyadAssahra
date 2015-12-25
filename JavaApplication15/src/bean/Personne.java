@@ -16,7 +16,7 @@ public class Personne {
     protected String id;
     protected String prenom;
     protected String nom;
-    protected String telephone;
+    protected String telephone; 
     protected String adresse;
     private String sexe;
     private String email;
@@ -93,6 +93,11 @@ public class Personne {
         return adresse;
     }
 
+    public String getSexe() {
+        return sexe;
+    }
+    
+
     public void setAdresse(String adresse) {
         this.adresse = adresse;
     }
@@ -105,7 +110,7 @@ public class Personne {
         this.ville = ville;
     }
 
-    public void setSex(String sex) {
+    public void setSexe(String sex) {
         this.sexe = sexe;
     }
 

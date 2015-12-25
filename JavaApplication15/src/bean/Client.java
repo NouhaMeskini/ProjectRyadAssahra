@@ -13,9 +13,20 @@ import java.util.List;
  */
 public class Client extends Personne {
     private List<Commande> commandes;
+    private static int cmp;
+    
+    public void generateId(){
+    
+    cmp++;
+    id = id+ cmp;
+ 
+}
    
 
     public Client() {
+        
+       generateId();
+        
     }
 
    
